@@ -2,7 +2,11 @@ package Senai;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+/**
+ * Classe responsável pelas regras/condições do jogo da forca
+ * @author Grupo
+ *
+ */
 public class JogoDaForca extends Jogo{
 
 	private String palavra1;
@@ -11,19 +15,35 @@ public class JogoDaForca extends Jogo{
 	private int contadorLetras = 0;
 	private int cont = 0;
 	private String letrasDigitadas[] = new String[20];
-
+	
+	
+	/**
+	 * Chama a class main, para incluir os jogadores no jogo
+	 * @param nomeDoJogo Obtem informações da class Jogo
+	 * @param competidor Obtem informações da class Jogo
+	 * @param adversario Obtem informações da class Jogo
+	 */
 	public JogoDaForca(String nomeDoJogo, Jogadores competidor, Jogadores adversario) {
 		super(nomeDoJogo, competidor, adversario);
 		this.palavra1 = palavra1;
 	}
-
+	
+	/**
+	 * Armazena a palavra que deverá ser advinhada pelo jogador adversário
+	 * @return retorna a palavra digitada
+	 */
 	public String AddPalavra() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println(this.getCompetidor() + " Digite Uma palavra");
 		palavra1 = scanner.nextLine();
 		return palavra1;
+		
 	}
-
+	
+	/**
+	 * Armazena a letra digitada pelo adversário 
+	 * @return retorna letra digitada
+	 */
 	public String EscolheLetra() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println(this.getAdversario() + " Digite Uma letra");
@@ -31,7 +51,12 @@ public class JogoDaForca extends Jogo{
 		return letra;
 
 	}
-
+	/**
+	 * Verifica se a letra digitada esta presente no AddPalavra, caso a letra corresponda com alguma da palavra, retorna "Letra Correta"
+	 * caso a letra seja incorreta ele entra na condição IF informando que algum membro foi perdido.
+	 * 
+	 * 
+	 */
 	public void AchaLetra() {
 		AddPalavra();
 		char palavra[] = palavra1.toCharArray();
@@ -81,6 +106,8 @@ public class JogoDaForca extends Jogo{
 					}
 
 				}
+				
+				
 				if (perder == 5) {
 					System.out.println(this.getCompetidor() + "Ganhou!!"+ " A palavra digitada era: " + this.palavra1);
 					break;
