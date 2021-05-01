@@ -88,19 +88,49 @@ public class JogoDaForca extends Jogo{
 						if ( x == (palavra.length -1)) {
 							perder++;
 							if(perder ==1) {
-								System.out.println("Você perdeu o Braço Esquerdo");
+								System.out.println("   _____");
+					            System.out.println("   |   |");
+					            System.out.println("   O   |");
+					            System.out.println("       |");
+					            System.out.println("       |");
+					            System.out.println("_______|");
+					            System.out.println("Errou a primeira tentativa, mas ainda tem 4 chances ");
 							}
 							else if(perder ==2 ) {
-								System.out.println("Você perdeu o Braço Direito");
+								System.out.println("   _____");
+					            System.out.println("   |   |");
+					            System.out.println("   O   |");
+					            System.out.println("  /|   |");
+					            System.out.println("       |");
+					            System.out.println("_______|");
+					            System.out.println("Errou a segunda tentativa, mas ainda tem 3 chances ");
 							}
 							else if(perder ==3 ) {
-								System.out.println("Você perdeu a Perna Direita");
+								System.out.println("   _____");
+					            System.out.println("   |   |");
+					            System.out.println("   O   |");
+					            System.out.println("  /|\\  |");
+					            System.out.println("       |");
+					            System.out.println("_______|");
+					            System.out.println("Atenção! Errou a terceira tentativa, só tem 2 chances ");
 							}
 							else if(perder ==4 ) {
-								System.out.println("Você perdeu a Perna esquerda");
+								System.out.println("   _____");
+					            System.out.println("   |   |");
+					            System.out.println("   O   |");
+					            System.out.println("  /|\\  |");
+					            System.out.println("  /    |");
+					            System.out.println("_______|");
+					            System.out.println("Cuidado! Errou a quarta tentativa, só tem 1 chance ");
 							}
 							else if(perder ==5 ) {
-								System.out.println("Você perdeu a Cabeça");
+								System.out.println("   _____");
+						        System.out.println("   |   |");
+						        System.out.println("   O   |");
+						        System.out.println("  /|\\  |");
+						        System.out.println("  / \\  |");
+						        System.out.println("_______|");
+						        System.out.println("Que pena, você perdeu. Tente mais tarde");
 							}
 						}		
 					}
